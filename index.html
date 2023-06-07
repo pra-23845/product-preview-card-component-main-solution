@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Caveat&family=Fraunces:wght@700&family=Inter:wght@400;500;700&family=Josefin+Sans:wght@300&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&family=Libre+Baskerville:wght@700&family=Merriweather+Sans&family=Montserrat:wght@100;400;500;700;900&family=Outfit&family=Poppins&family=Rubik:wght@400;500;600;700&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+        color: hsl(228, 12%, 48%);
+        background-color: hsl(30, 38%, 92%);
+      }
+      section {
+        padding: 9.6rem 3.6rem;
+      }
+      html {
+        font-size: 10px;
+      }
+      .grid {
+        max-width: 65rem;
+        margin: auto;
+        display: grid;
+        background-color: #fff;
+        grid-template-columns: repeat(2, 1fr);
+        /* gap: 3rem; */
+        /* align-items: center;
+        justify-content: center; */
+        border-radius: 8px;
+      }
+      .grid-items-content {
+        width: 85%;
+        padding-top: 3rem;
+        padding-left: 4.2rem;
+      }
+
+      img {
+        width: 100%;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+      .hidden-image {
+        display: none;
+      }
+      span {
+        text-transform: uppercase;
+        font-weight: 500;
+        display: block;
+        font-size: 1.4rem;
+        letter-spacing: 3px;
+        margin-bottom: 1.6rem;
+      }
+      h1 {
+        color: hsl(212, 21%, 14%);
+        font-size: 3.4rem;
+        font-weight: 700;
+        line-height: 1.01;
+        letter-spacing: -0.5px;
+        margin-bottom: 3rem;
+        font-family: "Fraunces", serif;
+      }
+      .grid-description {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        font-weight: 500;
+        margin-bottom: 3rem;
+      }
+      .d-flex {
+        display: flex;
+        align-items: center;
+        gap: 2.4rem;
+        margin-bottom: 3rem;
+      }
+      .number {
+        font-size: 3.4rem;
+        font-family: "Fraunces", serif;
+        color: hsl(158, 36%, 37%);
+      }
+      .number-cancled {
+        font-size: 1.4rem;
+      }
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.2rem;
+        cursor: pointer;
+        background-color: hsl(158, 36%, 37%);
+        font-size: 1.4rem;
+        width: 100%;
+        padding: 1.6rem 0;
+        color: hsl(0, 0%, 100%);
+        border: none;
+        border-radius: 8px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+      }
+      .btn:hover {
+        background-color: #087f5b;
+      }
+      @media (max-width: 725px) {
+        .grid {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+        }
+        img {
+          display: none;
+        }
+        h1 {
+          margin-bottom: 2rem;
+        }
+        .hidden-image {
+          display: block;
+          border-bottom-left-radius: 0;
+
+          border-top-right-radius: 8px;
+        }
+
+        .grid-items-content {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 0;
+          padding: 3.6rem;
+        }
+        .grid-description {
+          padding-right: 2.4rem;
+          font-size: 1.5rem;
+          margin-bottom: 2rem;
+        }
+        .d-flex {
+          margin-bottom: 2.4rem;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="grid">
+        <img
+          src="./images/image-product-desktop.jpg"
+          alt="perfume-product-image"
+        />
+        <img src="./images/image-product-mobile.jpg" class="hidden-image" />
+        <div class="grid-items">
+          <div class="grid-items-content">
+            <span>perfume</span>
+            <h1>Gabrielle Essence Eau De Parfum</h1>
+            <p class="grid-description">
+              A floral, solar and voluptuous interpretation composed by Olivier
+              Polge, Perfumer-Creator for the House of CHANEL.
+            </p>
+            <div class="d-flex">
+              <p class="number">$149.99</p>
+              <p class="number-cancled"><s>$169.99</s></p>
+            </div>
+            <button class="btn">
+              <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z"
+                  fill="#FFF"
+                /></svg
+              >Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
